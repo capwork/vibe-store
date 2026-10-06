@@ -1,16 +1,152 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vibe Store — Curated for Your Everyday</title><meta name="description" content="Vibe Store — modern essentials, elevated. Discover curated fashion, accessories and lifestyle pieces."><link rel="stylesheet" href="style.css"></head><body>
-<div class="announcement">Free shipping on orders over ₹1,499 <span>•</span> Easy 7-day returns</div>
-<header class="header"><a class="logo" href="#"><span>V</span> Vibe Store</a><nav class="nav"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#new">New Arrivals</a><a href="#story">Our Story</a></nav><div class="actions"><button class="icon-btn search-toggle" aria-label="Search">⌕</button><button class="icon-btn cart-toggle" aria-label="Cart">Bag <b id="cartCount">0</b></button><button class="menu" aria-label="Menu">☰</button></div></header>
-<div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Search products..." autocomplete="off"><button id="clearSearch">×</button></div>
-<main>
-<section class="hero"><div class="hero-copy"><p class="eyebrow">THE NEW EVERYDAY</p><h1>Find your <em>vibe.</em><br>Wear it well.</h1><p class="hero-text">Thoughtfully selected essentials designed to make everyday style feel effortless.</p><a class="primary" href="#shop">Explore collection <span>→</span></a><div class="hero-stats"><div><strong>4.9/5</strong><small>Customer rating</small></div><div><strong>12k+</strong><small>Happy customers</small></div><div><strong>7 days</strong><small>Easy returns</small></div></div></div><div class="hero-art"><div class="orb"></div><div class="hero-card hc-back">NEW<br>SEASON</div><div class="hero-card hc-front"><div class="model-placeholder">VIBE</div><div class="hero-product"><span>Essential Edit</span><b>From ₹899</b></div></div><div class="floating-note">✦ Curated<br><strong>just for you</strong></div></div></section>
-<section class="marquee"><div>MODERN ESSENTIALS <span>✦</span> EVERYDAY LUXURY <span>✦</span> MADE TO MOVE <span>✦</span> MODERN ESSENTIALS <span>✦</span> EVERYDAY LUXURY <span>✦</span></div></section>
-<section class="section" id="categories"><div class="section-head"><div><p class="eyebrow">SHOP BY MOOD</p><h2>What's your vibe?</h2></div><a href="#shop">View all →</a></div><div class="categories"><button class="category cat1" data-cat="Apparel"><span>APPAREL</span><small>Everyday layers</small></button><button class="category cat2" data-cat="Accessories"><span>ACCESSORIES</span><small>Details matter</small></button><button class="category cat3" data-cat="Lifestyle"><span>LIFESTYLE</span><small>Live beautifully</small></button><button class="category cat4" data-cat="Footwear"><span>FOOTWEAR</span><small>Walk your way</small></button></div></section>
-<section class="section products-section" id="shop"><div class="section-head"><div><p class="eyebrow">CURATED COLLECTION</p><h2 id="new">Best sellers</h2></div><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Apparel">Apparel</button><button class="filter" data-filter="Accessories">Accessories</button><button class="filter" data-filter="Lifestyle">Lifestyle</button><button class="filter" data-filter="Footwear">Footwear</button><select id="sort"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="name">Name</option></select></div></div><div class="product-grid" id="productGrid"></div></section>
-<section class="editorial" id="story"><div class="editorial-image"><div class="editorial-label">THE VIBE EDIT / 01</div></div><div class="editorial-copy"><p class="eyebrow">OUR PHILOSOPHY</p><h2>Less noise.<br><em>More you.</em></h2><p>We believe great style doesn't need to shout. Vibe Store brings together versatile pieces, thoughtful details, and the kind of quality you reach for again and again.</p><a class="text-link" href="#shop">Discover the edit <span>↗</span></a></div></section>
-<section class="newsletter"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Good vibes, delivered.</h2><p>New drops, private offers and style inspiration. Straight to your inbox.</p></div><form id="newsletterForm"><input type="email" placeholder="Your email address" required><button class="primary" type="submit">Join us <span>→</span></button></form></section>
-</main>
-<footer><div class="footer-top"><a class="logo" href="#"><span>V</span> Vibe Store</a><p>Modern essentials for a life well lived.</p><div class="socials"><a href="#">ig</a><a href="#">x</a><a href="#">in</a></div></div><div class="footer-links"><div><b>Shop</b><a href="#shop">New arrivals</a><a href="#shop">Best sellers</a><a href="#shop">Apparel</a><a href="#shop">Accessories</a></div><div><b>Help</b><a href="#">Shipping & returns</a><a href="#">Size guide</a><a href="#">Contact us</a><a href="#">FAQs</a></div><div><b>Company</b><a href="#story">Our story</a><a href="#">Journal</a><a href="#">Careers</a><a href="#">Privacy</a></div></div><div class="copyright">© 2026 Vibe Store. All rights reserved. <span>Made with intention.</span></div></footer>
-<div class="overlay" id="overlay"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><p class="eyebrow">YOUR BAG</p><h3>Shopping cart</h3></div><button id="closeCart">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><div>✦</div><h4>Your bag is waiting</h4><p>Add something you love and it will appear here.</p><a href="#shop" id="startShopping">Start shopping →</a></div><div class="cart-bottom" id="cartBottom"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="primary checkout">Checkout <span>→</span></button><small>Taxes and shipping calculated at checkout.</small></div></aside>
-<div class="modal" id="productModal"><button class="modal-close">×</button><div id="modalContent"></div></div>
-<div class="toast" id="toast">Added to your bag ✓</div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vibe Store — Curated for Your Everyday</title>
+    <meta name="description"
+        content="Vibe Store — modern essentials, elevated. Discover curated fashion, accessories and lifestyle pieces.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="announcement">Free shipping on orders over ₹1,499 <span>•</span> Easy 7-day returns</div>
+    <header class="header"><a class="logo" href="#"><span>V</span> Vibe Store</a>
+        <nav class="nav"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#new">New Arrivals</a><a
+                href="#story">Our Story</a></nav>
+        <div class="actions"><button class="icon-btn search-toggle" aria-label="Search">⌕</button><button
+                class="icon-btn cart-toggle" aria-label="Cart">Bag <b id="cartCount">0</b></button><button class="menu"
+                aria-label="Menu">☰</button></div>
+    </header>
+    <div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Search products..."
+            autocomplete="off"><button id="clearSearch">×</button></div>
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">THE NEW EVERYDAY</p>
+                <h1>Find your <em>vibe.</em><br>Wear it well.</h1>
+                <p class="hero-text">Thoughtfully selected essentials designed to make everyday style feel effortless.
+                </p><a class="primary" href="#shop">Explore collection <span>→</span></a>
+                <div class="hero-stats">
+                    <div><strong>4.9/5</strong><small>Customer rating</small></div>
+                    <div><strong>12k+</strong><small>Happy customers</small></div>
+                    <div><strong>7 days</strong><small>Easy returns</small></div>
+                </div>
+            </div>
+            <div class="hero-art">
+                <div class="orb"></div>
+                <div class="hero-card hc-back">NEW<br>SEASON</div>
+                <div class="hero-card hc-front">
+                    <div class="model-placeholder">VIBE</div>
+                    <div class="hero-product"><span>Essential Edit</span><b>From ₹899</b></div>
+                </div>
+                <div class="floating-note">✦ Curated<br><strong>just for you</strong></div>
+            </div>
+        </section>
+        <section class="marquee">
+            <div>MODERN ESSENTIALS <span>✦</span> EVERYDAY LUXURY <span>✦</span> MADE TO MOVE <span>✦</span> MODERN
+                ESSENTIALS <span>✦</span> EVERYDAY LUXURY <span>✦</span></div>
+        </section>
+        <section class="section" id="categories">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">SHOP BY MOOD</p>
+                    <h2>What's your vibe?</h2>
+                </div><a href="#shop">View all →</a>
+            </div>
+            <div class="categories"><button class="category cat1" data-cat="Apparel"><span>APPAREL</span><small>Everyday
+                        layers</small></button><button class="category cat2"
+                    data-cat="Accessories"><span>ACCESSORIES</span><small>Details matter</small></button><button
+                    class="category cat3" data-cat="Lifestyle"><span>LIFESTYLE</span><small>Live
+                        beautifully</small></button><button class="category cat4"
+                    data-cat="Footwear"><span>FOOTWEAR</span><small>Walk your way</small></button></div>
+        </section>
+        <section class="section products-section" id="shop">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">CURATED COLLECTION</p>
+                    <h2 id="new">Best sellers</h2>
+                </div>
+                <div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter"
+                        data-filter="Apparel">Apparel</button><button class="filter"
+                        data-filter="Accessories">Accessories</button><button class="filter"
+                        data-filter="Lifestyle">Lifestyle</button><button class="filter"
+                        data-filter="Footwear">Footwear</button><select id="sort">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="low">Price: Low to high</option>
+                        <option value="high">Price: High to low</option>
+                        <option value="name">Name</option>
+                    </select></div>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+        <section class="editorial" id="story">
+            <div class="editorial-image">
+                <div class="editorial-label">THE VIBE EDIT / 01</div>
+            </div>
+            <div class="editorial-copy">
+                <p class="eyebrow">OUR PHILOSOPHY</p>
+                <h2>Less noise.<br><em>More you.</em></h2>
+                <p>We believe great style doesn't need to shout. Vibe Store brings together versatile pieces, thoughtful
+                    details, and the kind of quality you reach for again and again.</p><a class="text-link"
+                    href="#shop">Discover the edit <span>↗</span></a>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div>
+                <p class="eyebrow">STAY IN THE LOOP</p>
+                <h2>Good vibes, delivered.</h2>
+                <p>New drops, private offers and style inspiration. Straight to your inbox.</p>
+            </div>
+            <form id="newsletterForm"><input type="email" placeholder="Your email address" required><button
+                    class="primary" type="submit">Join us <span>→</span></button></form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top"><a class="logo" href="#"><span>V</span> Vibe Store</a>
+            <p>Modern essentials for a life well lived.</p>
+            <div class="socials"><a href="#">ig</a><a href="#">x</a><a href="#">in</a></div>
+        </div>
+        <div class="footer-links">
+            <div><b>Shop</b><a href="#shop">New arrivals</a><a href="#shop">Best sellers</a><a
+                    href="#shop">Apparel</a><a href="#shop">Accessories</a></div>
+            <div><b>Help</b><a href="#">Shipping & returns</a><a href="#">Size guide</a><a href="#">Contact us</a><a
+                    href="#">FAQs</a></div>
+            <div><b>Company</b><a href="#story">Our story</a><a href="#">Journal</a><a href="#">Careers</a><a
+                    href="#">Privacy</a></div>
+        </div>
+        <div class="copyright">© 2026 Vibe Store. All rights reserved. <span>Made with intention.</span></div>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="drawer-head">
+            <div>
+                <p class="eyebrow">YOUR BAG</p>
+                <h3>Shopping cart</h3>
+            </div><button id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">
+            <div>✦</div>
+            <h4>Your bag is waiting</h4>
+            <p>Add something you love and it will appear here.</p><a href="#shop" id="startShopping">Start shopping
+                →</a>
+        </div>
+        <div class="cart-bottom" id="cartBottom">
+            <div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="primary checkout">Checkout
+                <span>→</span></button><small>Taxes and shipping calculated at checkout.</small>
+        </div>
+    </aside>
+    <div class="modal" id="productModal"><button class="modal-close">×</button>
+        <div id="modalContent"></div>
+    </div>
+    <div class="toast" id="toast">Added to your bag ✓</div>
+    <script src="script.js"></script>
+
+    <script>window.VibeBack=window.VibeBack||{_q:[],identify:function(u){this._q.push(['identify',u])},logout:function(){this._q.push(['logout'])},registerAction:function(n,f){this._q.push(['registerAction',n,f])}};</script>
+<script async src="https://alpha.vibeback.io/widget/v1/loader.js" data-widget-id="wgt_uK8tL7pvjdGJTwCv" data-domain="archiut.com"></script>
+
+</body>
+
+</html>
